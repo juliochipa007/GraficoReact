@@ -1,24 +1,25 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import './assets/css/App.css';
+import './assets/materialize/css/materialize.min.css';
+import Header from './components/Header';
+import Inputs from './components/Inputs';
+import {info} from './data/data';
+import Scope from './components/Scope';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-         <b>Jesus William </b> chanchoooo....
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Alguito mas
-        </a>
+    <div className="App lighten-5">
+      <Header />
+
+      <header className="container">
+      <Inputs />
+      <Scope
+        cursos={info.cursos}
+      />
+
       </header>
+
+
     </div>
   );
 }
